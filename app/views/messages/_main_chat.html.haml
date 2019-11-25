@@ -18,9 +18,9 @@
         this is a first message
 .input-box
   .input-box__message
-    %input{:type "text", :placeholder "type a message", :class "input-box__message--box"}
-    %label{:class "input-box__message--image"}
+    %input{type: "text", placeholder: "type a message", class: "input-box__message--box"}
+    %label{class: "input-box__message--image"}
       = icon('fas', 'images')
-      %input{:type "file", :class "input-box__message--image___none"}
+      %input{type: "file", class: "input-box__message--image___none"}
   .input-box__send
-    %input{ :type "submit", :value "Send", :class "input-box__send--box"}
+    %input{ type: "submit", value: "Send", class: "input-box__send--box"}
