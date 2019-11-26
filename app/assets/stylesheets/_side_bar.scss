@@ -1,0 +1,39 @@
+.side_bar {
+  float: left;
+  height: 100vh;
+  &__header {
+    display: -webkit-flex;
+    display: flex;
+    line-height: 100px;
+    height: 100px;
+    width: 260px;
+    padding: 0 20px;
+    color: #ffffff;
+    background-color: #253141;
+    &--name {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    &--edit {
+      margin-left: auto;
+    }
+  }
+  &__group {
+    height: calc(100vh - 100px - 20px);
+    width: 260px;
+    padding: 20px 20px 0;
+    color: #ffffff;
+    background-color: #2f3e51;
+    &--contents {
+      padding-bottom: 40px;
+      &___name {
+        font-size: 15px;
+        font-weight: bold;
+      }
+      &___message {
+        font-size: 11px;
+        font-weight: bold;
+      }
+    }
+  }
+}
