@@ -1,0 +1,21 @@
+.side_bar
+  .side_bar__header
+    .side_bar__header--name
+      = current_user.name
+    = link_to new_group_path, class: "side_bar__header--edit" do
+      = icon('fas', 'edit')
+    = link_to edit_user_path(current_user), class: "side-header__cog" do
+      = icon('fas', 'cog')
+  .side_bar__group
+    - current_user.groups.each do |group|
+      .side_bar__group--contents
+        = link_to group_messages_path(group) do
+          .side_bar__group--contents___name
+            = group.name
+          .side_bar__group--contents___message
+            まだメッセージはありません
+      -# .side_bar__group--contents
+      -#     .side_bar__group--contents___name
+      -#       test2
+      -#     .side_bar__group--contents___message
+      -#       まだメッセージはありません
