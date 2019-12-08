@@ -4,4 +4,7 @@ class Message < ApplicationRecord
 
   # imageカラムが空で、bodyカラムが空の場合は保存しない。
   validates :body, presence: true, unless: :image?
+
+  # image_uploaderをマウントとっている
+  mount_uploader :image, ImageUploader
 end

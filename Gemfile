@@ -60,3 +60,8 @@ gem 'font-awesome-sass'
 
 # devise
 gem 'devise'
+
+# carrierwave
+# 画像送信機能
+gem 'carrierwave'
+gem 'mini_magick'

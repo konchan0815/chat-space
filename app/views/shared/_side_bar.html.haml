@@ -13,9 +13,4 @@
           .side_bar__group--contents___name
             = group.name
           .side_bar__group--contents___message
-            まだメッセージはありません
-      -# .side_bar__group--contents
-      -#     .side_bar__group--contents___name
-      -#       test2
-      -#     .side_bar__group--contents___message
-      -#       まだメッセージはありません
+            = group.show_last_message
