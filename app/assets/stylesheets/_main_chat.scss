@@ -35,9 +35,10 @@
   }
   &__content {
     position: relative;
-    height: calc(100vh - 100px - 46px);
+    height: calc(100vh - 100px - 46px - 80px);
     padding: 46px 0 0 40px;
     background-color: #fafafa;
+    overflow: auto;
     &--chat {
       padding-bottom: 40px;
       &___date {
