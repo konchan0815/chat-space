@@ -12,7 +12,7 @@ $(function(){
             </div>
           </div>
           <div class="main_chat__content--chat___message">
-            ${message.boby}
+            ${message.body}
             <img src=${message.image} >
           </div>
         </div>`
@@ -29,7 +29,7 @@ $(function(){
             </div>
           </div>
           <div class="main_chat__content--chat___message">
-            ${message.boby}
+            ${message.body}
           </div>
         </div>`
       return html;
@@ -41,8 +41,8 @@ $(function(){
     var formData = new FormData(this);
     var url = $(this).attr('action')
     $.ajax({
-      url: url,  //同期通信でいう『パス』
-      type: 'POST',  //同期通信でいう『HTTPメソッド』
+      url: url,
+      type: 'POST',
       data: formData,  
       dataType: 'json',
       processData: false,
@@ -50,8 +50,13 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.messages').append(html);
+      $('.main_chat__content').append(html);
       $('form')[0].reset();
+      $('.main_chat__content').animate({ scrollTop: $('.main_chat__content')[0].scrollHeight});
+      $('.input-box__send--box').prop('disabled', false);
     })
+    .fail(function() {
+      alert("メッセージ送信に失敗しました");
+    });
   });
 });
